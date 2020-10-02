@@ -1,0 +1,44 @@
+Aufgaben
+
+1. FizzBuzz
+
+Zähle von 1 bis 1000
+Ist die Zahl ohne Rest durch 3 teilbar, so gebe 'Fizz' aus
+Ist die Zahl ohne Rest durch 5 teilbar, so gebe 'Buzz' aus
+Ist die Zahl ohne Rest durch 15 teilbar, so gebe 'FizzBuzz' aus
+Sonst gebe die Zahl selbst aus
+
+
+2. Gerade Fibonacci-Zahlen
+
+Eine Fibonacci-Zahl erhalte ich, indem ich die beiden vorhergehenden Fibonacci-Zahlen addiere. Angefangen bei 1 und 2 sind die ersten zehn Fibonacci-Zahlen also: 1 2 3 5 8 13 21 34 55 89
+Die Summe der geraden Fibonacci-Zahlen (bis fib(10)) ist also 2 + 8 + 34 = 44
+
+Berechne die Fibonacci-Sequenz für alle Ergebnisse unter 4.000.000 und addiere die geraden Fibonacci-Zahlen.
+
+
+3. Primfaktorzerlegung
+
+Die Primfaktoren von 13195 sind 5, 7, 13 und 29.
+Was ist der größte Primfaktor der Zahl 600851475143 ?
+
+4. Eine Palindromzahl liest sich von vorn wie von hinten gleich. Die größte Palindromzahl, die das Produkt zweier zweistelliger Zahlen ist, ist 91 x 99 = 9009
+   Was ist die größte Palindromzahl, die sich aus dem Produkt zweier dreistelliger Zahlen bilden lässt?
+
+
+5. Die Zahl 2520 ist die kleinste Zahl, die sich durch alle Zahlen von 1 bis 10 ohne Rest teilen lässt. 
+   Welches ist die kleinste positive Zahl, die sich durch alle Zahlen von 1 bis 20 ohne Rest teilen lässt?
+
+6. Die ersten sechs Primzahlen lauten 2, 3, 5, 7, 11, 13. Die sechste Primzahl ist also die 13. Was ist die 10001. Primzahl?
+
+7. Ein Landwirt züchtet drei Sorten Tiere: Hühner haben zwei Beine; Kühe und Schweine jeweils vier. Erstelle eine Funktion, die als Parameter die Anzahl der Hühner, der Schweine und der Rinder nimmt und daraus die Gesamtanzahl der Beine berechnet.
+   Beispiel: beine(2, 3, 5) ergibt 36, beine(1, 2, 3) ergibt 22
+
+8. Schreibe eine Funktion, die in einem beliebigen Text die Wörter zählt. Ein Wort geht dabei immer von einem Leerzeichen bis zum Nächsten.
+   countWords("Das war doch einfach, oder?") => 5
+
+9. Auf einem Schachfeld stehen nur zwei Türme. Schreibe eine Funktion, die die Positionen der Türme nimmt und berechnet, ob der erste den zweiten Turm schlagen kann.
+   kannSchlagen("A8", "E8") => true, kannSchlagen("C3", "D4") => false
+
+10. Du hast drei Programmierer angestellt und bezahlst sie (hoffentlich) auch. Schreibe eine Funktion, die drei Zahlen annimmt (die Stundenlöhne der drei Programmierer) und als Ergebnis den Unterschied zwischen dem best- und dem schlechtestbezahlten Programmierer ausgibt.
+   programmierer(1, 5, 9) => 8, programmierer(33, 50, 93) => 60
