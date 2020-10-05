@@ -9,7 +9,11 @@ public class App {
         PrimeFactors(PrimeFactors.class, "600851475143"),
         Palindrome(Palindrome.class, "3"),
         //Divisibility(Divisibility.class, "20"),
-        PrimesByIndex(PrimesByIndex.class, "10001");
+        PrimesByIndex(PrimesByIndex.class, "10001"),
+        Landwirt(Landwirt.class, "2", "3", "5"),
+        Wortzaehler(Wortzaehler.class, "Das war doch einfach,", "oder?"),
+        Schach(Schachturm.class, "A4", "C5"),
+        Programmierer(Programmierer.class, "90", "35", "50");
 
         /** Die Klasse, in der die Lösung implementiert ist. */
         Class<? extends Challenge> challengeClass;
