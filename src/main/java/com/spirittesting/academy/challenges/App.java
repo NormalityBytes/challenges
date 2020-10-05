@@ -6,7 +6,10 @@ public class App {
     public enum Challenges {
 
         Fibonacci(Fibonacci.class, "4000000"),
-        PrimeFactors(PrimeFactors.class, "600851475143");
+        PrimeFactors(PrimeFactors.class, "600851475143"),
+        Palindrome(Palindrome.class, "3"),
+        //Divisibility(Divisibility.class, "20"),
+        PrimesByIndex(PrimesByIndex.class, "10001");
 
         /** Die Klasse, in der die Lösung implementiert ist. */
         Class<? extends Challenge> challengeClass;
@@ -29,6 +32,7 @@ public class App {
                         result,
                         System.currentTimeMillis() - time);
             } catch (Throwable e) {
+                e.printStackTrace();
                 return "Failed to run " + challengeClass.getName();
             }
         }
