@@ -9,6 +9,10 @@ public class MathUtils {
         return gcd(Math.max(a, b), Math.min(a, b));
     }
 
+    public static long floorOfSqrt(long a) {
+        return 0;
+    }
+
     private static long gcd(long a, long b) {
         if (b == 0)
             return a;

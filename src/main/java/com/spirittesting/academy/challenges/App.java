@@ -8,7 +8,7 @@ public class App {
         Fibonacci(Fibonacci.class, "4000000"),
         PrimeFactors(PrimeFactors.class, "600851475143"),
         Palindrome(Palindrome.class, "3"),
-        //Divisibility(Divisibility.class, "20"),
+        Divisibility(Divisibility.class, "20"),
         PrimesByIndex(PrimesByIndex.class, "10001"),
         Landwirt(Landwirt.class, "2", "3", "5"),
         Wortzaehler(Wortzaehler.class, "Das war doch einfach,", "oder?"),
