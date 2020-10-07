@@ -74,3 +74,70 @@ AUFLAGEN: - Implementiere zunächst eine Testmethode für das 'kleine' Beispiel 
           - Jetzt schreibe einfache Tests für die Methode. Kurz und knackig, gerne auch viele Methoden
           - Jetzt gib Tests und Methodensignatur an Deinen Nachbarn. Er schreibt die Implementierung.
 
+12. Bowling 
+
+- Beim Bowling werden in einem Frame bis zu zwei Kugeln geworfen. Jeder Wurf kann zwischen 0 und 10 Pins treffen.
+  Trifft der erste Wurf direkt 10 Pins, nennt man das einen STRIKE. Addieren sich die Treffer aus erstem und zweiten
+  Wurf zu 10, spricht man von einem SPARE.
+- Ein Spiel besteht aus 10 Frames. 
+- Endet ein Frame mit einem STRIKE, so werden die Punkte der nächsten beiden Würfe zu den 10 Pins hinzugezählt.
+- Endet ein Frame mit einem SPARE, so werden die Punkte des nächsten Wurfs zu den 10 Pins hinzugezählt.
+- Endet das zehnte Frame mit einem STRIKE oder einem SPARE, so darf die nötige Anzahl Würfe zusätzlich geworfen werden.
+
+Beispiel für ein Spiel:
+Frame    Wurf 1   Wurf 2   Gesamtpunktzahl
+1        1        4        5
+2        4        5        14
+3        6        SPARE    29
+4        5        SPARE    49
+5        STRIKE   -        60
+6        0        1        61
+7        7        SPARE    77
+8        6        SPARE    97
+9        STRIKE   -        117
+10       2        SPARE, 6 133
+
+Implementiere ein Bowling Spiel. Nutze dabei die nachfolgenden Interfaces als Grundlage für Deine Klassen. 
+Denke an eine gute Strukturierung der Methoden und Klassen und implementiere zunächst die Tests! Implementiere
+vor allem das Beispiel als eigene Testklasse (BowlingGameIntegrationTest.java).
+
+public interface BowlingGame { 
+   
+   // registriert einen Wurf, der eine Anzahl Pins trifft
+   void addRoll(int pins);
+
+   List<Frame> getFrames();
+
+   int getScore();
+
+   boolean isGameOver();
+
+}
+
+public interface Frame {
+   
+   List<Integer> getPinsRolled();
+
+   // berechnet Punkte nur für dieses Frame, ohne Folgewürfe
+   int getScore();
+
+}
+
+Hinweis: Mit dieser Klasse kannst Du ein Spiel simulieren.
+
+public class BowlingGameSimulator {
+
+   private static final Random random = new SecureRandom();
+
+   public static void main(String[] args) {
+      BowlingGame game = new ... // Deine Implementierung für die Klasse BowlingGame
+      while (!game.isGameOver()) {
+         game.addRoll(random.nextInt(11));
+         System.out.println("---");
+         System.out.println(game.toString());
+      }
+      System.out.println("Game Over: " + game.getScore() + " Points");
+   }
+
+}
+
